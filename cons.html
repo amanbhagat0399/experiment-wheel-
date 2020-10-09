@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newstyle.css">
+    <title>Consequences</title>
+</head>
+<body>
+    <div id="decision_tree" class="buttons">
+        <h1> Decision Making Tree</h1>
+        <br>
+
+
+        <div class="row4">
+            <button class="btn" type="button"  onclick="collectresponse(this)" stage=1 id="b1" > 1. Problem </button>
+        </div>
+        <div class="row1">
+            <button class="btn" type="button" onclick="collectresponse(this)"  id="b2"  disabled> 2. Choices </button>
+
+            <button class="btn" type="button " onclick="collectresponse(this)"  id="b3"  disabled> 3. Consequences </button>
+        </div>
+
+        <div class="row2">
+            <button class="btn" type="button" onclick="collectresponse(this)" id="b4" disabled> 4. Values </button>
+
+            <button class="btn" type="button" onclick="collectresponse(this)"  id="b5" disabled> 5. Feelings </button>
+
+            <button class="btn" type="button " onclick="collectresponse(this)"  id="b6" disabled> 6. More Info</button>
+        </div>
+        <div class="row3">
+            <button class="btn" type="button" onclick="collectresponse(this)"  id="b7" disabled> 7. Who Can Help </button>
+            <button class="btn" type="button" onclick="collectresponse(this)"  id="b8" disabled> 8. Decision </button>
+
+            <button class="btn" type="button " onclick="collectresponse(this)"  id="b9" disabled> 9. Assess Decision
+            </button>
+            <button class="btn" type="button " onclick="changehtml()"  id="b10" >10. Preview  </button>
+            </button>
+        </div>
+        <div class="row4">
+            <button class="btn" type="button" onclick="alert('submitted')" id="b11" disabled>SUBMIT</button>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <div id="userdataentrybox" style="display: none">
+        <h3 id="iQuestion"></h3>
+        <h4 id="iContext"></h4>
+        <textarea  id="iResponse" style="display: block; min-width: 99%;"></textarea>
+                <div style="text-align: center;">
+                    <button type="button" id="InputNewBtn" onclick="AddNew()" disabled> Add More </button>
+                    <button type="button" id="InputRemoveBtn" onclick="RemoveCurrent()"disabled> Remove </button>
+                    <button type="button" id="InputPreviousBtn" onclick="ShowPrevious()"disabled> Previous </button>
+                    <button type="button" id="InputNextBtn" onclick="ShowNext()"disabled> Next </button>
+                    <button type="button" onclick="SubmitInput()"> Submit </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal6" class="modal6">
+
+        <!-- Modal content -->
+        <div class="modal-content6">
+            <span class="close6">&times;</span>
+            <p class="out">
+            <h3>PROBLEM :</h3>
+            <P class="content" id="p1">problem</P>
+            </p>
+            <P class="out">
+            <h3>CHOICES :</h3>
+            <ul>
+                <h3>CHOICE :</h3>
+                <P class="content" id="p2">"choice 1"</P>
+                <br>
+                <h3>CONSEQUENCES :</h3>
+                <P class="content" id="p31">"consequences 1"</P>
+                <P class="content" id="p32">"consequences 2"</P>
+                <P class="content" id="p33">"consequences 3"</P>
+                <br>
+                <h3>VALUES :</h3>
+                <P class="content" id="p41">"values 1"</P>
+                <P class="content" id="p42">"values 2"</P>
+                <P class="content" id="p43">"values 3"</P>
+                <br>
+                <h3>FEELING :</h3>
+                <P class="content" id="p5">"feeling 1"</P>
+            </ul>
+            </P>
+            <p class="out">
+            <h3>MORE INFO :</h3>
+            <P class="content" id="p6">more info</P>
+            </p>
+            <p class="out">
+            <h3>WHO CAN HELP ? :</h3>
+            <P class="content" id="p7">who can help??</P>
+            </p>
+            <p class="out">
+            <h3>DECISION :</h3>
+            <P class="content" id="p8">decision</P>
+            </p>
+            <p class="out">
+            <h3>ASSES DECISION :</h3>
+            <P class="content" id="p9">asses decision</P>
+            </p>
+        </div>
+
+    </div>
+    <script src="cons.js"></script>
+</body>
+</html>
